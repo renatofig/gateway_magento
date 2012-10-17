@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Locaweb_CieloBuyLoja>
+      <version>0.2.0</version>
+    </Locaweb_CieloBuyLoja>
+  </modules>
+
+  <frontend>
+    <routers>
+      <cielobuyloja>
+        <use>standard</use>
+        <args>
+          <module>Locaweb_CieloBuyLoja</module>
+          <frontName>cielobuyloja</frontName>
+        </args>
+      </cielobuyloja>
+    </routers>
+
+    <translate>
+      <modules>
+        <Locaweb_CieloBuyLoja>
+          <files>
+            <default>Locaweb_Gateway.csv</default>
+          </files>
+        </Locaweb_CieloBuyLoja>
+      </modules>
+    </translate>
+  </frontend>
+
+  <global>
+    <models>
+      <cielobuyloja>
+        <class>Locaweb_CieloBuyLoja_Model</class>
+      </cielobuyloja>
+    </models>
+
+    <helpers>
+      <cielobuyloja>
+        <class>Locaweb_CieloBuyLoja_Helper</class>
+      </cielobuyloja>
+    </helpers>
+
+    <blocks>
+      <cielobuyloja>
+        <class>Locaweb_CieloBuyLoja_Block</class>
+      </cielobuyloja>
+    </blocks>
+
+    <resources>
+      <cielobuyloja_setup>
+        <setup>
+          <module>Locaweb_CieloBuyLoja</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </cielobuyloja_setup>
+      <cielobuyloja_write>
+        <connection>
+          <use>core_write</use>
+        </connection>
+      </cielobuyloja_write>
+      <cielobuyloja_read>
+        <connection>
+          <use>core_read</use>
+        </connection>
+      </cielobuyloja_read>
+    </resources>
+
+    <payment>
+      <cc>
+        <types>
+          <ELO>
+            <code>ELO</code>
+            <name>Elo</name>
+            <order>50</order>
+          </ELO>
+
+          <DIN>
+            <code>DIN</code>
+            <name>Diners</name>
+            <order>60</order>
+          </DIN>
+        </types>
+      </cc>
+    </payment>
+  </global>
+
+  <default>
+    <payment>
+      <cielobuyloja>
+        <model>cielobuyloja/transaction</model>
+        <title>Locaweb Cielo Buy Page Loja</title>
+        <parcel_number>1</parcel_number>
+        <payment_action>authorize_capture</payment_action>
+        <active>1</active>
+        <cctypes>VI,MC,DI</cctypes>
+      </cielobuyloja>
+    </payment>
+  </default>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Locaweb_RedeCardWS>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Locaweb_RedeCardWS>
+  </modules>
+</config>

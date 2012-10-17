@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Locaweb_RedeCardWS>
+      <version>0.2.0</version>
+    </Locaweb_RedeCardWS>
+  </modules>
+
+  <frontend>
+    <routers>
+      <redecardws>
+        <use>standard</use>
+        <args>
+          <module>Locaweb_RedeCardWS</module>
+          <frontName>redecardws</frontName>
+        </args>
+      </redecardws>
+    </routers>
+
+    <translate>
+      <modules>
+        <Locaweb_RedeCardWS>
+          <files>
+            <default>Locaweb_Gateway.csv</default>
+          </files>
+        </Locaweb_RedeCardWS>
+      </modules>
+    </translate>
+  </frontend>
+
+  <global>
+    <models>
+      <redecardws>
+        <class>Locaweb_RedeCardWS_Model</class>
+      </redecardws>
+    </models>
+
+    <helpers>
+      <redecardws>
+        <class>Locaweb_RedeCardWS_Helper</class>
+      </redecardws>
+    </helpers>
+
+    <blocks>
+      <redecardws>
+        <class>Locaweb_RedeCardWS_Block</class>
+      </redecardws>
+    </blocks>
+
+    <resources>
+      <redecardws_setup>
+        <setup>
+          <module>Locaweb_RedeCardWS</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </redecardws_setup>
+      <redecardws_write>
+        <connection>
+          <use>core_write</use>
+        </connection>
+      </redecardws_write>
+      <redecardws_read>
+        <connection>
+          <use>core_read</use>
+        </connection>
+      </redecardws_read>
+    </resources>
+  </global>
+
+  <default>
+    <payment>
+      <redecardws>
+        <active>1</active>
+        <model>redecardws/transaction</model>
+        <payment_action>authorize_capture</payment_action>
+        <title>Locaweb RedeCard WebService</title>
+        <parcel_number>1</parcel_number>
+        <cctypes>VI,MC</cctypes>
+      </redecardws>
+    </payment>
+  </default>
+</config>

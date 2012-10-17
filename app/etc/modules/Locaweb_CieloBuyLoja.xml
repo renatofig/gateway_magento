@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Locaweb_CieloBuyLoja>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Locaweb_CieloBuyLoja>
+  </modules>
+</config>

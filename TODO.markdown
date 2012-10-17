@@ -1,0 +1,3 @@
+- Adicionar tipos de cartão aceitos nos sistemas (Adicionar Diners).
+- Refund.
+- Authorize.

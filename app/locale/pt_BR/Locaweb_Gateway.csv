@@ -1,0 +1,6 @@
+"Parcel Number", "Número de Parcelas"
+"Sandbox Environment","Ambiente de Testes"
+"Parcel Type", "Tipo do Pagamento"
+"Payment Denied.", "Pagamento não autorizado. Consulte sua operadora para maiores informações."
+"Payment capturing error.", "Não foi possível realizar sua transação."
+"An error happend during the connection to the Gateway.", "Ocorreu um erro de conexão com o Gateway de Pagamento."
