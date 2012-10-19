@@ -9,7 +9,7 @@ Atualmente, temos dois meios de pagamento disponíveis na extension do Magento:
 
 Além destes, estamos buscando colaboradores para desenvolver os seguintes meios de pagamento:
 
-* Boletos (Santander, Itaú, Caixa, HSBC, Bradesco e Banco do Brasil)
+* Boletos (Bradesco, Itaú, Banco do Brasil, Santander, HSBC e Caixa)
 * Itaú Shopline
 * Redecard Komerci Integrado
 * Cielo Buy Page Cielo
